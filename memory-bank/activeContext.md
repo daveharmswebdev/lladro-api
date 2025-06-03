@@ -2,12 +2,22 @@
 
 ## Current Work Focus
 
+- [x] Created `README.md` with project information and curl commands for Doer routes.
+- [x] Refactored `doerService.ts` to ensure `_count` attribute is not returned in API responses.
+- [x] Implemented `Doer` CRUD functionality (service, controller, routes).
 - [x] Implemented `Doer` model and its relationship with `Todo`.
 - [x] Updated database schema and seeded data.
 - [ ] Updating the memory bank.
 
 ## Recent Changes
 
+- [x] Created `README.md` with project overview, setup instructions, and API endpoint documentation including `curl` examples for Doer routes.
+- [x] Refactored `src/services/doerService.ts` to exclude internal `_count` property from JSON responses, returning only `todoCount`.
+- [x] Created new git branch `doer-crud`.
+- [x] Created `src/services/doerService.ts` for Doer business logic.
+- [x] Created `src/controllers/doerController.ts` to handle Doer HTTP requests.
+- [x] Created `src/routes/doerRoutes.ts` to define Doer API endpoints.
+- [x] Updated `src/app.ts` to include Doer routes.
 - [x] Created new git branch `doer-initialize`.
 - [x] Created `Doer` interface (`src/models/doer.model.ts`).
 - [x] Added `Doer` model to `prisma/schema.prisma`.
@@ -28,10 +38,13 @@
 
 ## Next Steps
 
+- [ ] Test Doer CRUD endpoints using `curl` commands from `README.md`.
 - [ ] Integrate Prisma Client into `todoService.ts` for database operations.
 - [ ] Implement the `Todo` API using the database.
 - [ ] Continue implementing the API.
-- [x] Update memory bank to reflect `Doer` implementation.
+- [x] Update memory bank to reflect `README.md` creation and `doerService` refactor.
+- [x] Update memory bank to reflect `Doer` CRUD implementation.
+- [x] Update memory bank to reflect `Doer` model implementation.
 
 ## Active Decisions and Considerations
 
