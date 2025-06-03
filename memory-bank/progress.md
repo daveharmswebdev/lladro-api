@@ -21,9 +21,14 @@
 - [x] Database migration for `Doer` model and relationship applied.
 - [x] Seed script updated to include `Doer`s and associate `Todo`s with `Doer`s.
 - [x] Database re-seeded with `Doer`s and `Todo`s.
+- [x] `Doer` CRUD service (`src/services/doerService.ts`) implemented and refactored to exclude `_count` from API responses.
+- [x] `Doer` CRUD controller (`src/controllers/doerController.ts`) implemented.
+- [x] `Doer` CRUD routes (`src/routes/doerRoutes.ts`) implemented and added to app.
+- [x] `README.md` created with project information, setup, and API (including Doer routes with `curl` examples).
 
 ## What's Left to Build
 
+- [ ] Test Doer CRUD endpoints.
 - [ ] Integrate Prisma Client into `todoService.ts` for database operations.
 - [ ] Implement the `Todo` API using the database.
 - [ ] Populate the memory bank files with more detailed information as the project evolves.
@@ -35,8 +40,12 @@
 - [x] Prisma schema and seed script created.
 - [x] Created `Todo` interface.
 - [x] Created `Doer` interface.
+- [x] Implemented `Doer` CRUD functionality.
+- [x] Created `README.md`.
 - [x] Updated activeContext.md with next steps.
-- [x] Memory bank updated to reflect `Doer` implementation.
+- [x] Memory bank updated to reflect `README.md` creation and `doerService` refactor.
+- [x] Memory bank updated to reflect `Doer` CRUD implementation.
+- [x] Memory bank updated to reflect `Doer` model implementation.
 
 ## Known Issues
 
