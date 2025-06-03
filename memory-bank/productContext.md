@@ -15,3 +15,6 @@
 ## User Experience Goals
 
 - [ ] Users should be able to quickly grasp the project's purpose and structure.
+
+## Availability
+- [ ] The project is available on GitHub (private).

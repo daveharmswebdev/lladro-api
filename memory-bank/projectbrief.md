@@ -8,3 +8,6 @@
 ## Core Requirements
 
 - [ ] To create a well-documented project.
+
+## Repository
+- [ ] Repository URL: https://github.com/daveharmswebdev/lladro-api
