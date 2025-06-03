@@ -2,27 +2,36 @@
 
 ## Current Work Focus
 
-- [x] Setting up PostgreSQL database with Docker Compose.
-- [x] Initialized Prisma, defined Todo schema, and seeded database.
+- [x] Implemented `Doer` model and its relationship with `Todo`.
+- [x] Updated database schema and seeded data.
 - [ ] Updating the memory bank.
 
 ## Recent Changes
 
+- [x] Created new git branch `doer-initialize`.
+- [x] Created `Doer` interface (`src/models/doer.model.ts`).
+- [x] Added `Doer` model to `prisma/schema.prisma`.
+- [x] Established one-to-many relationship between `Doer` and `Todo` in `prisma/schema.prisma`.
+- [x] Created and applied database migration for `Doer` and `Todo` relationship.
+- [x] Updated `prisma/seed.ts` to include `Doer`s and associate them with `Todo`s.
+- [x] Re-seeded the database.
 - [x] Created `docker-compose.yml` for PostgreSQL.
-- [x] Initialized Prisma, defined `Todo` schema, created migrations, and seeded initial data.
-- [ ] Refactored the tsconfig.json file.
-- [ ] Added Jest to the .clinerules/techstack.md file.
-- [ ] Refactored the package.json file to add scripts for dev, build, test, and start.
-- [ ] Added an appropriate .gitignore file for this project.
-- [ ] Modified the API to use an index.ts and app.ts.
-- [ ] Implemented JSON for the hello world endpoint.
-- [ ] Created a new GitHub repository and pushed the initial commit.
+- [x] Initialized Prisma, defined initial `Todo` schema, created migrations, and seeded initial data.
+- [x] Refactored the tsconfig.json file.
+- [x] Added Jest to the .clinerules/techstack.md file.
+- [x] Refactored the package.json file to add scripts for dev, build, test, and start.
+- [x] Added an appropriate .gitignore file for this project.
+- [x] Modified the API to use an index.ts and app.ts.
+- [x] Implemented JSON for the hello world endpoint.
+- [x] Created a new GitHub repository and pushed the initial commit.
+- [x] Committed and pushed changes related to Prisma setup, PostgreSQL configuration, and initial Todo data seeding.
 
 ## Next Steps
 
 - [ ] Integrate Prisma Client into `todoService.ts` for database operations.
 - [ ] Implement the `Todo` API using the database.
 - [ ] Continue implementing the API.
+- [x] Update memory bank to reflect `Doer` implementation.
 
 ## Active Decisions and Considerations
 
@@ -36,4 +45,6 @@
 
 - [ ] The memory bank is crucial for maintaining context across sessions.
 - [ ] Models should be defined as interfaces unless complex logic or behavior is required.
-- [ ] Created a `Todo` interface with `id`, `name`, `description`, and `status` fields. The `status` field is a `TodoStatus` enum with values `New`, `InProgress`, `Complete`, and `Abandoned`.
+- [x] Created a `Todo` interface with `id`, `name`, `description`, and `status` fields. The `status` field is a `TodoStatus` enum with values `New`, `InProgress`, `Complete`, and `Abandoned`.
+- [x] Created a `Doer` interface with `id`, `firstName`, and `lastName` fields.
+- [x] Established a one-to-many relationship in Prisma: one `Doer` can have many `Todo`s, and one `Todo` belongs to one `Doer`.
