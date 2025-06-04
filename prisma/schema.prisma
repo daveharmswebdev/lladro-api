@@ -35,4 +35,14 @@ model Doer {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   todos     Todo[]
+  regionId  Int?
+  region    Region?  @relation(fields: [regionId], references: [id])
+}
+
+model Region {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  doers     Doer[]
 }
