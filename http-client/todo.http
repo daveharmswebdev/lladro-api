@@ -1,0 +1,36 @@
+### Variables
+@baseUrl = http://localhost:3000
+@todoId = 1 # Change as needed
+@doerIdForNewTodo = 1 # Change as needed for creating a todo
+@contentType = Content-Type: application/json
+
+### Get all todos
+GET {{baseUrl}}/todos
+
+### Get todo by ID
+GET {{baseUrl}}/todos/{{todoId}}
+
+### Create a new todo
+POST {{baseUrl}}/todos
+{{contentType}}
+
+{
+  "name": "New Todo Item",
+  "description": "Description of the new todo",
+  "status": "New", // Valid statuses: New, InProgress, Complete, Abandoned
+  "doerId": {{doerIdForNewTodo}}
+}
+
+### Update a todo
+PUT {{baseUrl}}/todos/{{todoId}}
+{{contentType}}
+
+{
+  "name": "Updated Todo Item",
+  "description": "Updated description",
+  "status": "InProgress",
+  "doerId": 1
+}
+
+### Delete a todo
+DELETE {{baseUrl}}/todos/{{todoId}}

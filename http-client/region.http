@@ -1,0 +1,32 @@
+### Variables
+@baseUrl = http://localhost:3000
+@regionId = 1 # Change as needed
+@contentType = Content-Type: application/json
+
+### Get all regions
+GET {{baseUrl}}/regions
+
+### Get region by ID
+GET {{baseUrl}}/regions/{{regionId}}
+
+### Get regions with doers
+GET {{baseUrl}}/regions/with-doers
+
+### Create a new region
+POST {{baseUrl}}/regions
+{{contentType}}
+
+{
+  "name": "New Region Name"
+}
+
+### Update a region
+PUT {{baseUrl}}/regions/{{regionId}}
+{{contentType}}
+
+{
+  "name": "Updated Region Name"
+}
+
+### Delete a region
+DELETE {{baseUrl}}/regions/{{regionId}}

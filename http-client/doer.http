@@ -1,0 +1,37 @@
+### Variables
+@baseUrl = http://localhost:3000
+@doerId = 1 # Change as needed
+@regionIdForNewDoer = 1 # Change as needed for creating a doer
+@contentType = Content-Type: application/json
+
+### Get all doers
+GET {{baseUrl}}/doers
+
+### Get doer by ID
+GET {{baseUrl}}/doers/{{doerId}}
+
+### Get doer by ID and all their todos
+GET {{baseUrl}}/doers/{{doerId}}/todos
+
+### Create a new doer
+POST {{baseUrl}}/doers
+{{contentType}}
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "regionId": {{regionIdForNewDoer}}
+}
+
+### Update a doer
+PUT {{baseUrl}}/doers/{{doerId}}
+{{contentType}}
+
+{
+  "firstName": "Jane",
+  "lastName": "Doer",
+  "regionId": 1
+}
+
+### Delete a doer
+DELETE {{baseUrl}}/doers/{{doerId}}
